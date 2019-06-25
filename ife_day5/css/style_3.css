@@ -1,0 +1,28 @@
+h1 {
+    color: white;
+    background-color: #999999;
+    padding: 30px 200px 30px 30px;
+    margin: 0;
+}
+h2 {
+    float: left;
+    padding: 50px 15px;
+    margin-bottom: 1px;
+    margin-top: 0;
+    margin-right: 15px;
+    background-color: #99999963;
+}
+div span+span {
+    margin-left: 40px;
+}
+.detail {
+    padding: 15px 100px 95px 10px;
+    margin-bottom: 1px;
+    border-bottom: inset;
+}
+.detail_2 {
+    padding: 0px 100px 1px 10px;
+    margin-bottom: 1px;
+    margin-top: 0;
+    border-bottom: inset;
+}
