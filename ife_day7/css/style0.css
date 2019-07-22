@@ -1,0 +1,115 @@
+html {
+    font-family: sans-serif;
+    height: 100%;
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.header {
+    height: 8%;
+    background-color: black;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+}
+.header ul {
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+
+.header li {
+    font-size: 10px;
+    display: inline;
+    list-style-type: none;
+    padding: 3px;
+}
+
+.header a {
+    color: white;
+}
+
+.banner { 
+    height: 20%;
+    background-color: green;
+    position: relative;
+}
+
+.banner ul {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+}
+
+.banner li {
+    display: inline;
+    padding: 5px;
+    border: solid 1px;
+    background-color: rgb(206, 204, 204);
+}
+
+.tab {
+    height: 5%;
+    border-bottom: solid rgb(221, 220, 220) 1px;
+    padding-left: 15%;
+    margin-top: 2%;
+}
+
+.tab li {
+    float: left;
+    font-size: 12px;
+    width: 80px;
+    padding: 4px;
+    text-align: center;
+    list-style-type: none;
+    border: solid rgb(202, 202, 202) 1px;
+    border-bottom: none;
+    background-color: rgb(224, 224, 224);
+}
+
+.content {
+    height: 48%;
+    width: 71%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+/* 元素得先有一个宽度，才能用margin：0 auto；来居中 */
+    overflow: auto;
+}
+
+.content p {
+    flex: 1;
+    text-align: center;
+    border: solid rgb(226, 226, 226) 1px;
+    padding: 80px;
+    margin: 4px;
+}
+
+footer {
+    background-color: black;
+    height: 13%;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
