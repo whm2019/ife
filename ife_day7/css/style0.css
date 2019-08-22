@@ -1,6 +1,8 @@
 html {
     font-family: sans-serif;
     height: 100%;
+/* 设置元素百分比是相对其父元素来的，所以父元素有高度的情况下，元素设百分数高度才有意义。
+比如此例中html不设为100%，则body的高度值无意义，之后header、banner等的高度值也没有意义。 */
   }
 
 * {

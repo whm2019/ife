@@ -1,0 +1,133 @@
+html{
+    height:100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {   
+    width: 38%;
+    text-align: center;
+    margin: 0 auto;
+/* 这里不能使用text-align居中，
+如果使用则效果是h2在屏幕左边30%的空间内居中，
+而不是在整个屏幕内居中。 */
+/* 第二句和第三句加起来，h2既整体居中又每行居中 */
+}
+
+p {
+    font-size: 15px;
+    color: rgb(206, 206, 206);
+    /* text-align: justify; */
+    /* justify是两端对齐，没有居中效果 */
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.header {
+    height: 600px;
+    position: relative;
+    background-image:url("file:///D:/Microsoft VS Code/IFE2019/ife_day9/作业要求/前端学院设计图-assets/Background1.png");
+/* 本地图片引用方法 */
+    background-size: cover;
+}
+
+.header div {
+    position: absolute;
+
+    top: 15%;
+    left: 25%;
+    color: white;
+    width: 50%;
+    /* text-align: center; 为什么这两句在这里无效？*/
+    /* margin: 0 auto; */
+    
+}
+
+.header div p {
+    text-align: center;
+/* text-align: center作用在多行文本元素时可以使每行文本都居中显示 */
+}
+
+.header form {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 60%;
+    /* margin: auto; */
+    text-align: center;
+    border: 0.5px solid hsla(0,0%,100%,.5);/*1px已为最小，改为0.5px效果也不会改变*/
+    color: white;
+}
+
+form p {
+    text-align: center;
+    color: rgb(206, 206, 206);
+}
+
+form input[type*=text] {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;/*背景透明*/
+    border: 0.5px solid hsla(0,0%,100%,.5);/*半透明边框*/
+    color: rgb(206, 206, 206);
+    margin-right: 5px;
+}
+
+form input[type*=submit] {
+    background-color: white;
+    width: 80px;
+    height: 30px;/* 用width、height的方法比用padding好 */
+    /* text-align: center; 这句可以不加*/
+    font-size: 10px;
+    border: none;/*input元素自带边框,需要手动去除*/
+}
+
+.content1 {
+    position: relative;
+    height: 500px;
+    /* margin: 0 auto; 本句无法形成居中效果，为什么呢？*/
+    
+}
+
+.content1 .title {
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    /* text-align: center; */
+    /* margin: 0 auto;
+ 此两句无用。是因为position和这两句不兼容吗？
+ 答：并不是，之所以没有显示“全屏”居中效果是因为position：absolute
+ 绝对定位会影响块状元素的默认宽度！
+ 默认宽度变小，当然只会有局部居中效果，看起来就像是没有效果*/
+}
+
+.content1 .title .subheading {
+    font-size: 10px;
+    font-style: bold;
+    color: black;
+    text-align: center;
+}
+
+.mobile_first {
+    position: absolute;
+    left: 15%;
+    width: 30%;
+}
