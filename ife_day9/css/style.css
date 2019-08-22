@@ -42,7 +42,7 @@ p {
 .header {
     height: 600px;
     position: relative;
-    background-image:url("file:///D:/Microsoft VS Code/IFE2019/ife_day9/作业要求/前端学院设计图-assets/Background1.png");
+    background-image:url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Background1.png");
 /* 本地图片引用方法 */
     background-size: cover;
 }
@@ -61,7 +61,7 @@ p {
 
 .header div p {
     text-align: center;
-/* text-align: center作用在多行文本元素时可以使每行文本都居中显示 */
+  /* text-align: center作用在多行文本元素时可以使每行文本都居中显示 */
 }
 
 .header form {

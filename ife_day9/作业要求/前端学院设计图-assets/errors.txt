@@ -1,3 +1,0 @@
-[Mon Aug 05 2019 19:07:37 GMT+0800 (中国标准时间)] layer "denis@getcraftwork.com": Unsupported extension: com
-[Mon Aug 05 2019 19:07:37 GMT+0800 (中国标准时间)] layer "China is speeding up strategic plan, standards, traffic rules, ": Expected end of input but "," found.
-[Mon Aug 05 2019 19:07:37 GMT+0800 (中国标准时间)] layer "youname@mail.com": Unsupported extension: com
