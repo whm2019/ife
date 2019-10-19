@@ -9,7 +9,7 @@ body {
     overflow: scroll;
     /* 用百分比来表示宽度实在是错误的做法，本来是为了在浏览器缩小窗口时保持页面元素布局不变，
     结果窗口缩小后不仅布局混乱（因为总有元素的宽度不是用百分比来表示，而且用百分比表示每次都得计算，太麻烦
-    而且有些元素变小了真的好丑（😓 ，
+    而且有些元素变小了真的丑（😓 ，
     总之还是scroll好用！*/
 }
 
@@ -38,7 +38,6 @@ p {
     font-size: 15px;
     color: rgb(206, 206, 206);
     line-height: 1.5em;
-    /* overflow: auto; */
     /* text-align: justify; */
     /* justify是两端对齐，没有居中效果 */
 }
@@ -51,8 +50,8 @@ p {
     min-width: 1262.67px;/* 解决缩小浏览器窗口后向右滚动屏幕时，右侧背景出现空白的现象 */
     height: 600px;
     position: relative;
-    background-image:url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Background1.png");
-/* 本地图片引用方法 */
+    background-image:url("../img/Background1.png");
+/* 本地图片引用方法，首部的".."表示上一级目录 */
     background-size: cover;
 }
 
@@ -63,14 +62,11 @@ p {
     left: 330px;
     color: white;
     width: 600px;
-    /* text-align: center; 为什么这两句在这里无效？*/
-    /* margin: 0 auto; */
     
 }
 
 .header div p {
     text-align: center;
-  /* text-align: center作用在多行文本元素时可以使每行文本都居中显示 */
 }
 
 .header form {
@@ -80,15 +76,9 @@ p {
     padding-top: 30px;
     padding-bottom: 50px;
     width: 720px;
-    /* margin: auto; */
     text-align: center;
-    border: 0.5px solid hsla(0,0%,100%,.5);/*1px已为最小，改为0.5px效果也不会改变*/
+    border: 0.5px solid hsla(0,0%,100%,.5);
     color: white;
-}
-
-.header form p {
-    text-align: center;
-    color: rgb(206, 206, 206);
 }
 
 .header form input[type*=text] {
@@ -104,7 +94,6 @@ p {
     background-color: white;
     width: 80px;
     height: 30px;/* 用width、height的方法比用padding好 */
-    /* text-align: center; 这句可以不加*/
     font-size: 10px;
     border: none;/*input元素自带边框,需要手动去除*/
     cursor: pointer;
@@ -115,7 +104,6 @@ p {
     height: 500px;
     width: 100%;
     min-width: 1262.67px;
-    /* margin: 0 auto; 本句无法形成居中效果，为什么呢？*/
     
 }
 
@@ -123,7 +111,7 @@ p {
     position: absolute;
     top: 25px;
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
     /* margin: 0 auto;
  此两句无用。是因为position和这两句不兼容吗？
  答：并不是，之所以没有显示“全屏”居中效果是因为position：absolute
@@ -133,9 +121,7 @@ p {
 
 .content1 .title .subheading {
     font-size: 10px;
-    font-style: bold;
     color: black;
-    text-align: center;
 }
 
 .mobile_first, .accessibility, .fluid_typography, .customization {
@@ -146,26 +132,21 @@ p {
     position: absolute;
     top: 150px;
     left: 250px;
-    /* width: 360px; */
-    overflow: auto;
 }
 .accessibility {
     position: absolute;
     top: 150px;
     right: 200px;
-    /* width: 400px; */
 }
 .fluid_typography {
     position: absolute;
     top: 300px;
     left: 250px;
-    /* width: 400px; */
 }
 .customization {
     position: absolute;
     top: 300px;
     right: 200px;
-    /* width: 400px; */
 }
 
 .content1 span {
@@ -178,26 +159,25 @@ p {
 .content1 .text {
     float: left;
     width: 280px;
-    /* text-align: left;此句多余，妈的，浏览器的页面元素查看真的是神器！*/
 }
 
 .mobile_Icon {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Iphone Icon.png") center no-repeat;
+    background: url("../img/Iphone Icon.png") center no-repeat;
 }
 .access_Icon {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Access Icon.png") center no-repeat;
+    background: url("../img/Access Icon.png") center no-repeat;
 }
 .fluid_Icon {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Pencil Icon.png") center no-repeat;
+    background: url("../img/Pencil Icon.png") center no-repeat;
 }
 .customized_Icon {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Settings Icon.png") center no-repeat;
+    background: url("../img/Settings Icon.png") center no-repeat;
 }
 
 .content2 {
     min-width: 1262.67px;
     height: 500px;
-    background-image: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Background2.png");
+    background-image: url("../img/Background2.png");
     background-size: cover;
     position: relative;
 }
@@ -207,32 +187,26 @@ p {
     top: 100px;
     left: 250px;
     width: 380px;
-    text-align: left;
 }
 
 .content2 .policies h2 {
     text-align: left;
-    width: 100%;
     color: white;
     font-size: 38px;
 }
 
-.content2 .button {
+.content2 .buttons {
     position: absolute;
     bottom: 100px;
     left: 250px;
-
 }
 
-.content2 button{
-    display: inline-block;
-    width: 180px;  /*当display: inline时，margin-top,margin-bottom无效 */
+.content2 button {
+    width: 180px;
     height: 40px;  
     cursor: pointer;
-    border: 1px;
+    border: none;
     font-size: 10px;
-
-
 }
 
 .content2 button:nth-of-type(1) {
@@ -251,7 +225,6 @@ p {
     height: 400px;
     right: 0;
     top: 50px;
-    
 }
 
 .try {
@@ -259,7 +232,6 @@ p {
     width: 100%;
     min-width: 1262.67px;
     position: relative;
-    margin: 0 auto;
     border-bottom: 1px solid #ccc;
 }
 
@@ -275,8 +247,6 @@ p {
     position: absolute;
     top: 120px;
     text-align: center;
-    /* overflow: auto; overflow到底时用在那个元素里的？*/
-
 }
 
 .try .singletan {
@@ -290,7 +260,6 @@ p {
 }
 
 .full_border {
-    /* height: 600px; */
     border-bottom: 1px solid #ccc;
     width: 100%;
     min-width: 1262.67px;
@@ -300,8 +269,6 @@ p {
     width: 60%;
     margin: 5% auto;
     margin-bottom: 0;
-    /* overflow: auto; */
-    /* border: 1px solid #ccc; */
 }
 
 .article div {
@@ -311,41 +278,26 @@ p {
 .article img {
     height: 80%;
     width: 60%;
-    text-align: center;
-    /* margin: 0 3%; 用法：margin: top right bottom left OR margin: top&bottom right&left */
+    /* margin: 0 3%; 用法：margin: top right bottom left（顺时针）OR margin: top&bottom right&left */
 }
 
-.article .bird .margin {
+.article .txt {
+    width: 30%;
+}
+.article .bird .right {
     float: right;
-    width: 30%;
-    height: 80%;
 }
-.article .plants .margin {
+.article .plants .left {
     float: left; 
-    width: 30%;
 }
-/* .article .margin { */
-    /* overflow: auto; */
-/* } */
-
-
 .article .bird img {
     float: left;
-    
 }
 .article .plants img {
     float: right;
 
 }
 
-/*.article .clearfix:after {
-    content: "020"; 
-    display: block; 
-    height: 0; 
-    clear: both; 
-    visibility: hidden;
-
-}*/
 
 .crew {
     height: 750px;
@@ -366,8 +318,8 @@ p {
 
 }
 .member {
-    width: 370px;
-    height: 270px;
+    /* width: 370px;
+    height: 270px; */
     margin: 15px;
 }
 
@@ -385,7 +337,6 @@ p {
 }
 
 .crew .txt {
-    /* margin-top: 60px; */
     position: relative;
     top:80px;
 }
@@ -417,41 +368,32 @@ p {
 }
 
 .crew .pics .facebook {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Facebook.png");
-
+    background: url("../img/Facebook.png");
 }
 .crew .pics .twitter {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Twitter.png");
+    background: url("../img/Twitter.png");
 }
 .crew .pics .ins {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Instagram.png");
+    background: url("../img/Instagram.png");
 }
 
 
 .crew .pics .crew1 {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Userpic 1.png") no-repeat center;
+    background: url("../img/Userpic 1.png") no-repeat center;
     background-size: cover;
 }
 .crew .pics .crew2 {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Userpic 2.png") no-repeat center;
+    background: url("../img/Userpic 2.png") no-repeat center;
     background-size: cover;
 }
 .crew .pics .crew3 {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Userpic 3.png") no-repeat center;
+    background: url("../img/Userpic 3.png") no-repeat center;
     background-size: cover;
 }
 .crew .pics .crew4 {
-    background: url("file:///C:/软件安装路径/Microsoft VS Code/IFE2019/ife_day9/img/Userpic 4.png") no-repeat center;
+    background: url("../img/Userpic 4.png") no-repeat center;
     background-size: cover;
 }
-
-
-/*.crew img {
-    flex: 40%;
-    margin: 2%;
-    cursor: pointer;
-
-} */
 
 .contact {
     width: 900px;
@@ -464,14 +406,11 @@ p {
     width: 420px;
     height: 320px;
     border: 1px solid grey;
-    /* padding: 2%; */
     margin: 40px auto;
-
-
+    text-align: center;
 }
 
 .contact form p {
-    text-align: center;
     font-weight: 600;
     font-size: 10px;
     color: black;
@@ -482,11 +421,8 @@ p {
     width: 320px;
     height: 32px;
     background-color: transparent;/*背景透明*/
-    border: 0.5px solid inset;
-    margin: 5px 50px; /* 为什么这里用margin: 2% auto不能让input元素居中？ */
-    /* align: center; 如何让input居中？*/
-    /* line-height: 30px; */
-
+    margin: 5px; /* 为什么这里用margin: 2% auto不能让input元素居中？ */
+    /* align: center; 如何让input居中？答：给父元素(form)加上text-align: center;*/
 }
 
 .contact form input[type*=submit] {
@@ -494,14 +430,12 @@ p {
     background: black;
     border: none;
     cursor: pointer;
-    /* height: 10%; */
 }
 
 .contact form textarea {
     width: 320px;
     height: 125px;
     margin: 5px 50px;
-    /* border: 1px inset;无用？如何设置其边框？ */
 }
 
 .contact .text {
@@ -519,7 +453,6 @@ p {
     height: 300px;
     background: black;
     display: flex;
-    /* margin: 0 auto; */
 }
 
 .footer h4 {
