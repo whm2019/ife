@@ -1,0 +1,21 @@
+body {
+    margin-left: 30px;
+}
+
+div span+span {
+    margin-left: 40px;
+}
+
+h1 {
+    /*text-align: center;此句多余*/
+    float: left;
+    color:white;
+    background-color: #0099cc;
+    margin-top: 0;
+    margin-right: 30px;
+    padding: 45px 40px 630px;/*三个数值分别表示顶部、左右、底部。*/
+}
+
+.content {
+    padding-top: 5px;/*内容整体下移*/
+}
