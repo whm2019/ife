@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        var oInput=document.getElementsByTagName("input");
+        var oAdd=document.getElementById("add-btn");
+        var oMinus=document.getElementById("minus-btn");
+        var oTimes=document.getElementById("times-btn");
+        var oDivide=document.getElementById("divide-btn");
+        var oResult=document.getElementById("result");
+
+        document.getElementById("add-btn").onclick=function(){
+            document.getElementById("result").innerHTML=Number(document.getElementById("first-number").value)+Number(document.getElementById("second-number").value);
+        }
+        oMinus.onclick=function(){
+            oResult.innerHTML=Number(oInput[0].value)-Number(oInput[1].value);
+        }
+        oTimes.onclick=function(){
+            oResult.innerHTML=Number(oInput[0].value)*Number(oInput[1].value);
+        }
+        oDivide.onclick=function(){
+            oResult.innerHTML=Number(oInput[0].value)/Number(oInput[1].value);
+        }
+        
+
+    </script>
+</body>
+</html>
