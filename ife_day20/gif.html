@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>gif</title>
+    <style>
+        div{
+            width: 480px;
+            height: 480px;
+            background-image: url("images/erik_ce204002.jpg");
+            background-position: 0 0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementsByTagName("div")[0];
+            //alert(oDiv.style.backgroundPositionY);
+
+             setInterval(function(){
+                var Y=parseInt(getComputedStyle(oDiv,false)["backgroundPositionY"]);
+                //alert(Y);
+                if(Y==-8160){
+                    oDiv.style.backgroundPositionY=0;
+                }
+                else{
+                    oDiv.style.backgroundPositionY=Y-480+"px";
+                }
+                
+             },120);
+        }
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

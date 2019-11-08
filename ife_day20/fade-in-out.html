@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>fade-in-out</title>
+
+    <script>
+        window.onload=function(){
+            var oDiv=document.querySelector("#fade-obj");
+            var oBtn=document.querySelector("#fade-btn");
+            var timer=null;
+
+            oBtn.onclick=function(){//淡出
+                oBtn.disabled=true;
+                //clearInterval(timer);//相同定时器只能开启一个
+                timer=setInterval(function(){
+                    var oP=getComputedStyle(oDiv,false)["opacity"]*100;
+                    var speed=iTarget=0;
+                    
+                    if(oBtn.innerHTML=="淡出"){
+                        iTarget=0;
+                        speed=-1;
+                    }
+                    else{
+                        iTarget=100;
+                        speed=1;
+                    }
+
+                    if(oP==iTarget){
+                        clearInterval(timer);
+                        oBtn.innerHTML=oBtn.innerHTML=="淡出"?"淡入":"淡出";
+                        oBtn.disabled=false;
+                    }
+                    else{
+                        oDiv.style.opacity=(oP+speed)/100;
+                        //--oP/100;//js只能获取非行间样式，但不能修改非行间样式
+                    }
+                },30);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000;"></div>
+    <button id="fade-btn">淡出</button>
+</body>
+</html>

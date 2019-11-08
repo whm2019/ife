@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+    <style>
+        .palette {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .palette li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="palette">
+        <li style="background-color:crimson"></li>
+        <li style="background-color:bisque"></li>
+        <li style="background-color:blueviolet"></li>
+        <li style="background-color:coral"></li>
+        <li style="background-color:chartreuse"></li>
+        <li style="background-color:darkolivegreen"></li>
+        <li style="background-color:cyan"></li>
+        <li style="background-color:#194738"></li>
+    </ul>
+
+    <p class="color-picker"></p>
+
+    <script>
+
+        var oUl = document.querySelector("ul");
+        //alert(oUl);
+
+        // oUl.onclick=function(ev){
+        //     //alert(oUl.nodeName.toLowerCase());
+        //     var oEvent=ev||window.event;
+        //     var iTarget=oEvent.target||oEvent.srcElement;
+        //     //alert(iTarget.style.backgroundColor);//js里引用background-color时应该写作“backgroundColor”
+
+        //     if(iTarget.nodeName.toLowerCase()=="li"){
+        //         var p=document.getElementsByTagName("p")[0];
+
+        //         p.innerHTML=iTarget.style.backgroundColor;
+        //         p.style.color=iTarget.style.backgroundColor;
+        //     }
+        // }
+
+        oUl.onclick = function (d) {//这里函数传参可以用任意字母或单词（除了keyword等特殊词）来表示“事件”，不一定非得是“ev”
+                                    //当然用“ev”表示，代码更易读(本来这段代码可读性就是shit，所以这里也无所谓了)
+            var d = d || window.event;//因为js变量类型的随意性，如果不是遇到兼容性问题，本句不写也不影响程序运行。
+            var t = d.target || d.srcElement;//事件的Target属性，可以准确定位发生事件的目标元素，
+                                             //这里虽然触发事件是“点击ul”，但是target属性可以定位到li
+                                             //之所以在这里使用.target属性是为了使用“事件委托”，减少dom操作（即事件个数），优化页面性能（交互更流畅）
+            //事件委托的原理是利用冒泡，比如：子元素的onclick可以触发父元素onclick函数，
+            //在子元素个数比较多的情况下就可以利用父（祖先）元素来减少程序里的事件个数
+            if (t.nodeName.toLowerCase() == "li") {//.nodeName属性值是大写字母
+                var tmp = t.style.backgroundColor;//js里引用background-color时应该写作“backgroundColor”
+                var p = document.getElementsByClassName("color-picker")[0];
+
+                p.innerHTML = tmp;
+                p.style.color = tmp;
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
