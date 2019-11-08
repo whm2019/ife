@@ -13,7 +13,6 @@
             right: 20px;
             width: 420px;
         }
-
         body {
             margin: 0;
         }
@@ -29,6 +28,7 @@
         <button>和我打招呼</button>
         <button>查看我的爱好</button>
         <button>大圣，你可快收了你的神通罢……</button><br>
+        <button>纯HTML</button>
         <button>样式一</button>
         <button>样式二</button>
         <button>样式三</button>
@@ -84,7 +84,7 @@
         var oDate=new Date();//日期对象的Date函数“Date”首字母必须大写。
         //alert(oDate.getHours());
 
-        aBtn[0].onclick = function () {
+        aBtn[0].onclick = function () {//打招呼
             oGreeting.style.display = "block";
             oHobby.style.display = "none";
             if(oDate.getHours()>4&&oDate.getHours()<12){
@@ -97,21 +97,26 @@
                 oGreeting.innerHTML="good evening!";
             }
         }
-        aBtn[1].onclick = function () {
+        aBtn[1].onclick = function () {//我的爱好
             oHobby.style.display = "block";
             oGreeting.style.display = "none";
         }
-        aBtn[2].onclick = function () {
+        aBtn[2].onclick = function () {//收起隐藏内容
             oHobby.style.display = "none";
             oGreeting.style.display = "none";
         }
-        aBtn[3].onclick = function () {
-            oCss.href = "css/style_1.css";
+
+        //网页样式切换
+        aBtn[3].onclick=function(){
+            oCss.href="";
         }
         aBtn[4].onclick = function () {
-            oCss.href = "css/style_2.css";
+            oCss.href = "css/style_1.css";
         }
         aBtn[5].onclick = function () {
+            oCss.href = "css/style_2.css";
+        }
+        aBtn[6].onclick = function () {
             oCss.href = "css/style_3.css";
         }
     </script>

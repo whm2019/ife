@@ -12,31 +12,32 @@
     <p id="result">运算结果</p>
 
     <script>
-        var oInput=document.getElementById("dec-number");
-        var oBtn=document.getElementById("trans-btn");
-        var oResult=document.getElementById("result");
+        var oInput = document.getElementById("dec-number");
+        var oBtn = document.getElementById("trans-btn");
+        var oResult = document.getElementById("result");
 
         function dec2bin(decNumber) {
-            var array=new Array();
-            var i=0;
-            var biNum="";
-            if(parseInt(decNumber)!=decNumber||decNumber<0){
+            var array = new Array();
+            var i = 0;
+            var biNum = "";
+            array[0]=0;
+            if (parseInt(decNumber) != decNumber || decNumber < 0) {
                 alert("请输入非负整数！");
             }
-            else{
-                while(decNumber>0){
-                    array[i]=decNumber%2;
-                    decNumber=parseInt(decNumber/2);//js取整得用parseInt
+            else {
+                while (decNumber) {
+                    array[i] = decNumber % 2;
+                    decNumber = parseInt(decNumber / 2);//js取整得用parseInt
                     i++;
                 }
-                for(var i=array.length-1; i>=0; i--){
-                    biNum+=array[i];
+                for (var i = array.length - 1; i >= 0; i--) {
+                    biNum += array[i];
                 }
                 return biNum;
             }
         }
-        oBtn.onclick=function(){
-            oResult.innerHTML=dec2bin(parseFloat(oInput.value));//oInput.value默认为字符类型；
+        oBtn.onclick = function () {
+            oResult.innerHTML = dec2bin(parseFloat(oInput.value));//oInput.value默认为字符类型；
         }
     </script>
 </body>
