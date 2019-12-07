@@ -1,0 +1,233 @@
+html,body{
+    height:100%;
+    margin:0;
+    font-family: sans-serif;
+}
+.primary{
+    width: 100px;
+    /* min-height: 400px; */
+    height: 120%;
+    background:url("../images/Base.png");
+    position: relative;
+    float:left;
+    overflow: hidden;
+}
+.primary .icons {
+    position: absolute;
+    top: 20px;
+    text-align:center;
+    line-height: 2em;
+}
+.primary .settings{
+    /* 试一下用float来做 */
+    width:100px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    box-sizing: border-box;
+    padding: 0 18px;
+    display: flex;
+}
+.primary .grid{
+    background: url("../images/Grid.png") center no-repeat;
+}
+.primary .setting{
+    background: url("../images/Settings.png") center no-repeat;
+}
+.primary a{
+    display: block;
+    width:16px;
+    height: 16px;
+    flex: 1;
+    cursor: pointer;
+}
+/* .primary is end */
+
+
+.secondary {
+    width: 200px;
+    height: 120%;
+    background: url("../images/Base\ Secondary.png");
+    position: relative;
+    float:left;
+    color:white;
+    overflow: hidden;
+}
+.secondary div{
+    position:absolute;
+    left: 15px;
+    width: 170px;
+    border-bottom: 1px solid #ccc;
+    font-size: 12px;
+}
+h3 {
+    font-size: 12px;
+    color: #ccc;
+    background:url("../images/Settings.png") no-repeat right;
+    background-size: contain;
+}
+ul{
+    padding-left:0;
+    line-height: 2em;
+}
+li{
+    list-style: none;
+}
+
+.secondary .menu{
+    top: 10px;
+}
+.secondary .your_products{
+    top: 200px;
+}
+.secondary .dashboard{
+    top: 360px;
+    border-bottom: none;
+}
+.secondary .status {
+    bottom: 5px;
+    border-bottom: none;
+}
+/* .secondary is end! */
+
+
+.main{
+    width:80%;
+    height:120%;
+    position:relative;
+    left: 300px;
+}
+.main div{
+    box-sizing: border-box;
+}
+.top_bar {
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	border-bottom: 1px solid #ccc;
+}
+h2{
+    margin-left: 20px;
+}
+.profile {
+	position: absolute;
+	right: 10px;
+	top: -10px;
+	height: 70px;
+}
+
+.chats {
+    position: absolute;
+    top: 70px;
+	width: 400px;
+	height: calc(100% - 70px);
+	overflow: auto;
+}
+.chats .search, .open_chat .bar{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    border: 1px solid #ccc;
+	border-top: none;
+	border-left: none;
+}
+.search form {
+    width: 300px;	
+    height: 34px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -157px;
+	margin-top: -17px;
+}
+.search input {
+	padding-left: 13px;
+	width: 100%;
+	height: 30px;
+	/* background: transparent; */
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+.search button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 2px;
+    right: 0;
+}
+.search button::before{
+    content:url("../images/Search\ icon.png");
+}
+.scrollbar_hide{
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    height: calc(100% - 70px);
+    border: none;
+    overflow: hidden;
+}
+.list{
+    position: absolute;
+    left: 0;
+    right: -17px;
+    /* 因为没有设置固定width，故而可以使用这种改变位移的方式灵活改变width */
+    height: 100%;
+    border: none;
+    overflow-y: auto;
+}
+.chat,.message{
+    width: 100%;
+    position: absolute;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-top: 0;
+}
+.chats .chat{
+    height: 140px;
+}
+.n1{
+    top: 0px;
+}
+.n2{
+    top: 140px;
+}
+.n3{
+    top: 280px;
+}
+.n4{
+    top: 420px;
+}
+.n5{
+    top: 560px;
+}
+.n6{
+    top: 700px;
+}
+.n7{
+    top: 840px;
+}
+/* the end of .chat*/
+
+
+.open_chat {
+	width: calc(100% - 400px);
+	height: calc(100% - 70px);
+	position: absolute;
+	left: 400px;
+    top: 70px;
+}
+.message {
+    height: 300px;
+}
+.m1{
+    top: 0px;
+}
+.m2{
+    top:300px;
+}
+.m3{
+    top: 600px;
+}
+
